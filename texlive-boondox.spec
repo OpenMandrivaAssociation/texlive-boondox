@@ -1,3 +1,9 @@
+# revision 22313
+# category Package
+# catalog-ctan /fonts/boondox
+# catalog-date 2011-05-04 08:36:11 +0200
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-boondox
 Version:	1.0
 Release:	1
@@ -86,6 +92,7 @@ mode are provided, as are LaTeX support files.
 %doc %{_texmfdistdir}/doc/fonts/boondox/README
 %doc %{_texmfdistdir}/doc/fonts/boondox/boondox-doc.pdf
 %doc %{_texmfdistdir}/doc/fonts/boondox/boondox-doc.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -96,3 +103,5 @@ mode are provided, as are LaTeX support files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
