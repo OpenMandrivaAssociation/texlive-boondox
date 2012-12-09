@@ -93,3 +93,18 @@ mode are provided, as are LaTeX support files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
++ Revision: 749841
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
++ Revision: 717972
+- texlive-boondox
+- texlive-boondox
+- texlive-boondox
+- texlive-boondox
+- texlive-boondox
+
