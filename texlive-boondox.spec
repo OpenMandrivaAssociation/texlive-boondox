@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-boondox
 Version:	1.0
-Release:	4
+Release:	5
 Summary:	Mathematical alphabets derived from the STIX fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/boondox
