@@ -1,12 +1,6 @@
-# revision 22313
-# category Package
-# catalog-ctan /fonts/boondox
-# catalog-date 2011-05-04 08:36:11 +0200
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-boondox
-Version:	1.0
-Release:	10
+Version:	1.02d
+Release:	1
 Summary:	Mathematical alphabets derived from the STIX fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/boondox
@@ -35,54 +29,12 @@ mode are provided, as are LaTeX support files.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/fonts/map/dvips/boondox/boondox.map
-%{_texmfdistdir}/fonts/tfm/public/boondox/BOONDOX-b-cal.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/BOONDOX-b-calo.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/BOONDOX-b-ds.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/BOONDOX-b-frak.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/BOONDOX-r-cal.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/BOONDOX-r-calo.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/BOONDOX-r-ds.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/BOONDOX-r-frak.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxbf7z.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxbf8a.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxbl7z.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxbl8a.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxbow7z.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxbw7z.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxbw8a.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxrf7z.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxrf8a.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxrl7z.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxrl8a.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxrow7z.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxrw7z.tfm
-%{_texmfdistdir}/fonts/tfm/public/boondox/zxxrw8a.tfm
-%{_texmfdistdir}/fonts/type1/public/boondox/zxxbf8a.pfb
-%{_texmfdistdir}/fonts/type1/public/boondox/zxxbl8a.pfb
-%{_texmfdistdir}/fonts/type1/public/boondox/zxxbw8a.pfb
-%{_texmfdistdir}/fonts/type1/public/boondox/zxxrf8a.pfb
-%{_texmfdistdir}/fonts/type1/public/boondox/zxxrl8a.pfb
-%{_texmfdistdir}/fonts/type1/public/boondox/zxxrw8a.pfb
-%{_texmfdistdir}/fonts/vf/public/boondox/BOONDOX-b-cal.vf
-%{_texmfdistdir}/fonts/vf/public/boondox/BOONDOX-b-calo.vf
-%{_texmfdistdir}/fonts/vf/public/boondox/BOONDOX-b-ds.vf
-%{_texmfdistdir}/fonts/vf/public/boondox/BOONDOX-b-frak.vf
-%{_texmfdistdir}/fonts/vf/public/boondox/BOONDOX-r-cal.vf
-%{_texmfdistdir}/fonts/vf/public/boondox/BOONDOX-r-calo.vf
-%{_texmfdistdir}/fonts/vf/public/boondox/BOONDOX-r-ds.vf
-%{_texmfdistdir}/fonts/vf/public/boondox/BOONDOX-r-frak.vf
-%{_texmfdistdir}/tex/latex/boondox/BOONDOX-cal.sty
-%{_texmfdistdir}/tex/latex/boondox/BOONDOX-calo.sty
-%{_texmfdistdir}/tex/latex/boondox/BOONDOX-ds.sty
-%{_texmfdistdir}/tex/latex/boondox/BOONDOX-frak.sty
-%{_texmfdistdir}/tex/latex/boondox/uboondox-cal.fd
-%{_texmfdistdir}/tex/latex/boondox/uboondox-calo.fd
-%{_texmfdistdir}/tex/latex/boondox/uboondox-ds.fd
-%{_texmfdistdir}/tex/latex/boondox/uboondox-frak.fd
-%doc %{_texmfdistdir}/doc/fonts/boondox/README
-%doc %{_texmfdistdir}/doc/fonts/boondox/boondox-doc.pdf
-%doc %{_texmfdistdir}/doc/fonts/boondox/boondox-doc.tex
+%{_texmfdistdir}/fonts/map/dvips/boondox
+%{_texmfdistdir}/fonts/tfm/public/boondox
+%{_texmfdistdir}/fonts/type1/public/boondox
+%{_texmfdistdir}/fonts/vf/public/boondox
+%{_texmfdistdir}/tex/latex/boondox
+%doc %{_texmfdistdir}/doc/fonts/boondox
 
 #-----------------------------------------------------------------------
 %prep
@@ -93,18 +45,3 @@ mode are provided, as are LaTeX support files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 749841
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 717972
-- texlive-boondox
-- texlive-boondox
-- texlive-boondox
-- texlive-boondox
-- texlive-boondox
-
