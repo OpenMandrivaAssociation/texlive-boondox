@@ -1,6 +1,6 @@
 Name:		texlive-boondox
 Version:	54512
-Release:	1
+Release:	2
 Summary:	Mathematical alphabets derived from the STIX fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/boondox
