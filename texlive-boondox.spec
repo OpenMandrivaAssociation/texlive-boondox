@@ -1,9 +1,10 @@
 %global tl_name boondox
 %global tl_revision 79618
+%global tl_version 1.02d
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	1.02d
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Mathematical alphabets derived from the STIX fonts
 Group:		Publishing
@@ -13,7 +14,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/boondox.r%{tl_re
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/boondox.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 The package contains a number of PostScript fonts derived from the STIX
@@ -22,3 +24,10 @@ weights for calligraphic, fraktur and double-struck alphabets. Virtual
 fonts with metrics suitable for maths mode are provided, as are LaTeX
 support files.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from boondox:
+Map boondox.map
+TL_DROPIN_EOF
